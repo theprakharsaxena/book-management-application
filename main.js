@@ -47,9 +47,10 @@ class UI {
 
     static deleteBook(el) {
         if (el.classList.contains("delete")) {
-            el.parentElement.parentElement.remove()
-            if (confirm("Are you sure"))
+            if (confirm("Are you sure")){
+                el.parentElement.parentElement.remove()
                 UI.showAlert("Book Deleted Successfully", "danger")
+            }
             else
                 UI.showAlert("Sahi hai", "dark")
         }
